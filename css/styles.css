@@ -88,8 +88,8 @@ button {
 .header {
     border-bottom: 1px solid var(--accent);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-            0px 1px 1px rgba(46, 47, 66, 0.16),
-            0px 1px 6px rgba(46, 47, 66, 0.08);
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header .container {
@@ -476,18 +476,18 @@ button {
 
 .modal {
     position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 408px;
-        min-height: 584px;
-        background-color: #FCFCFC;
-        border-radius: 4px;
-        padding: 72px 24px 24px;
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
-            0px 1px 3px rgba(0, 0, 0, 0.12),
-            0px 2px 1px rgba(0, 0, 0, 0.2);
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 408px;
+    min-height: 584px;
+    background-color: #FCFCFC;
+    border-radius: 4px;
+    padding: 72px 24px 24px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
@@ -531,17 +531,18 @@ button {
     color: var(--dark);
     margin-bottom: 16px;
 }
+
 /* ==================== MODAL FORM ==================== */
 .modal-form {
     display: flex;
     flex-direction: column;
 }
 
-.form-field {
+.form-field-container {
     margin-bottom: 8px;
 }
 
-.form-field-comment {
+.form-comment-container {
     margin-bottom: 16px;
 }
 
@@ -611,12 +612,12 @@ button {
 }
 
 /* Checkbox */
-.form-checkbox {
+.form-checkbox-container {
     margin-bottom: 24px;
 }
 
 .checkbox-label {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     font-size: 12px;
     line-height: 1.17;
@@ -634,6 +635,7 @@ button {
     align-items: center;
     justify-content: center;
     fill: transparent;
+    flex-shrink: 0;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -676,6 +678,7 @@ button {
 .form-submit-btn:focus {
     background-color: var(--pressed-state);
 }
+
 /* ==================== FOOTER SUBSCRIBE ==================== */
 .footer-subscribe {
     margin-left: auto;
