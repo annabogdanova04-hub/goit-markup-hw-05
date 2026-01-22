@@ -630,7 +630,6 @@ button {
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
-    display: inline-flex;
     margin-right: 8px;
     align-items: center;
     justify-content: center;
