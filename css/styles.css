@@ -174,7 +174,7 @@ button {
 /* ==================== HERO ==================== */
 .hero {
     background-color: var(--dark);
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg-desktop.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -186,7 +186,7 @@ button {
 /* Retina для Desktop */
 @media (min-resolution: 192dpi) {
     .hero {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg@2x.jpg);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg-desktop@2x.jpg);
     }
 }
 
@@ -844,6 +844,7 @@ button {
 
 .mobile-contacts {
     margin-bottom: 48px;
+    font-style: normal;
 }
 
 .mobile-contacts-list {
@@ -933,22 +934,22 @@ button {
     /* Hero */
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/hero-bg.jpg);
-        padding: 72px 0;
+            url(../images/hero-bg-mobile.jpg);
+        padding: 96px 0;
     }
 
     /* Retina mobile */
     @media (min-resolution: 192dpi) {
         .hero {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                url(../images/hero-bg@2x.jpg);
+                url(../images/hero-bg-mobile@2x.jpg);
         }
     }
 
     .hero-title {
         font-size: 36px;
         line-height: 1.11;
-        max-width: 288px;
+        max-width: 216px;
         margin-bottom: 72px;
     }
 
@@ -1057,31 +1058,48 @@ button {
 
     .container {
         max-width: 768px;
-        padding: 0 16px;
+        padding: 16px;
     }
 
     /* Header */
-    .burger-menu-btn {
-        display: flex;
+    .header .container {
+        padding: 16px;
+        height: 72px;
     }
 
-    .nav-list {
-        display: none;
+    /* Contacts в стовпчик */
+    .contacts-list {
+        flex-direction: column;
+        gap: 16px;
     }
 
-    .contacts {
-        display: none;
+    .contacts-link {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+    }
+
+    /* Hero tablet */
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/hero-bg-tablet.png);
+        padding: 112px 0;
     }
 
     /* Hero retina tablet */
     @media (min-resolution: 192dpi) {
         .hero {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                url(../images/hero-bg@2x.jpg);
+                url(../images/hero-bg-tablet@2x.png);
         }
     }
 
     /* Features */
+    .features {
+        padding: 112px 0;
+    }
+
     .features-list {
         flex-direction: row;
         flex-wrap: wrap;
@@ -1126,18 +1144,30 @@ button {
 
     /* Footer */
     .footer-container {
+        max-width: 584px;
+        margin: 0 auto;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: baseline;
+        align-items: flex-start;
         gap: 72px 24px;
     }
 
     .footer-info {
         margin-right: 0;
+        flex: 1;
     }
 
     .footer-subscribe {
         margin-left: 0;
+    }
+
+    /* Mobile menu hidden on tablet */
+    .mobile-menu {
+        display: none;
+    }
+
+    .burger-menu-btn {
+        display: none;
     }
 }
 
@@ -1151,4 +1181,14 @@ button {
     .mobile-menu {
         display: none;
     }
+.contacts-list {
+    flex-direction: row;
+    gap: 40px;
+}
+
+.contacts-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
 }
